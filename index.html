@@ -81,13 +81,13 @@
         <div id="catalogue">
           <div class="lineaCatalogo" ng-repeat="linea in lineas">
             <img ng-src="{{linea.image}}" alt="">
-            <h3 ng-click="getLinea(linea)">{{linea.title}}</h3>
+            <h3 ng-click="getLinea(linea)">{{linea.titleLinea}}</h3>
             <p>{{linea.description}}</p>
           </div>
         </div>
       </div>
       
-      <div class="productPartial" ng-repeat="linea in lineas | filter: {title: selected_linea_title}">
+      <div class="productPartial" ng-repeat="linea in lineas | filter: {titleLinea: selected_linea_title}">
 
         <div id="banner-fade1">
           <ul class="bjqs">
@@ -95,7 +95,7 @@
           </ul>
         </div>
 
-        <div class="datosProducto" ng-repeat="producto in linea.productos | filter: {title: 'Producto 2'}">
+        <div class="datosProducto" ng-repeat="producto in linea.productos | filter: {title: 'Producto2'}">
           <h2 class="tituloProducto">{{producto.title}}</h2>
 
           <p class="descripcionProducto">{{producto.description}}</p>
