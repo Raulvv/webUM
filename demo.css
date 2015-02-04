@@ -1,5 +1,3 @@
-/* Demo CSS - You do not need this css in your own slider */
-
 body{
 	margin: 0;
 	padding: 0;
@@ -10,23 +8,44 @@ a:link {color: black; text-decoration: none }
 a:hover {color: black; text-decoration: none }
 a:visited {color: black; text-decoration: none }
 
+.verticalAlign{
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
 header{
+	background-color: white;
 	margin: 0;
 	padding: 20px;
 	width: 100%;
-	height: 120px;
+	height: 80px;
+	z-index: 99999999999999;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 #logo{
+	margin-right: 0;
+	padding-right: 0;
+	width: 200px;
+	/*height: auto;*/
+}
 
+#logo img{
+	width: 160px;
+	height: auto;
 }
 
 #enlaces{
+	position: relative;
+	bottom: 80%;
 	float: right;
-	background: #2C75B6;
-}
-
-#enlaces{
 	margin-right: 40px;
 }
 
@@ -34,7 +53,60 @@ header{
 	display: inline-block;
 	list-style: none;
 	margin: 0;
+	margin-left: 20px;
+	height: 50px;
+	text-align: center;
+}
+
+#enlaces .menu > li{
+	padding-top: 5px;
+	width: 130px;
+}
+
+#enlaces li a{
+	color: #2B75B6;
+	font-weight: bold;
+}
+
+.seleccion{
+	border-top-right-radius: 20%;
+	border-top-left-radius: 20%;
+}
+
+.menuSelect{
+	background-color: #2B75B6;
+}
+
+.menuSelect a{
+	color: white !important;
+}
+
+.submenu{
+	width: 100%;
 	height: 40px;
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	display: none;
+	background-color: #2B75B6;
+	position: relative;
+	bottom: 20px;
+	left: 20px;
+
+}
+
+.submenu li{
+	width: 80px;
+}
+
+.submenu li a{
+	color: white !important;
+}
+
+.sacaSubMenu{
+	color: white;
+	display: block;
+	background-color: #2B75B6;
 }
 
 pre{
@@ -56,7 +128,9 @@ pre{
 }
 
 h2{
-	font-size: 48px;
+	font-size: 28px;
+	text-align: center;
+	z-index: 1000000000000;
 }
 
 pre + h2{
@@ -64,15 +138,58 @@ pre + h2{
 }
 
 #container{
-	margin:0 auto;
-	padding-bottom:80px;
+	margin: 145px auto 0;
 }
 
 #banner-fade,
 #banner-slide{
 	margin: 0;
 	padding: 0;
-	margin-bottom: 60px;
+	bottom: 23px;
+	margin-bottom: 120px;
+}
+
+#banner-fade + h2{
+	color: #2B75B6;
+}
+
+.scrollCatalogo{
+	width: 400px;
+	margin: 20px auto;
+}
+
+.scrollCatalogo hr{
+	z-index: -10000;
+}
+
+.scrollCatalogo img{
+	width: 50px;
+	height: 25px;
+	position: relative;
+	bottom: 20px;
+	left: 160px;
+	background: white;
+	margin: 0 10px 0 10px;
+}
+
+#catalogue{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.lineaCatalogo{
+	width: 17%;
+	height: 450px;
+	margin: 1%;
+	display: inline-block;
+	text-align: center;
+}
+
+.lineaCatalogo img{
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
 }
 
 ul.bjqs-controls.v-centered li a{
@@ -121,4 +238,16 @@ p.bjqs-caption{
 .bjqs-prev a img{
 	width: 50px;
 	height: 50px;
+}
+
+#banner-fade1{
+	margin: 0 auto 5%;
+}
+
+.tituloProducto{
+	text-align: center;
+}
+
+.descripcionProducto{
+	text-align: center;
 }
