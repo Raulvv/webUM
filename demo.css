@@ -178,9 +178,13 @@ pre + h2{
 	margin: 0 auto;
 }
 
+.productPartial{
+	margin-bottom: 10%;
+}
+
 .lineaCatalogo{
 	width: 17%;
-	height: 450px;
+	height: 300px;
 	margin: 1%;
 	display: inline-block;
 	text-align: center;
@@ -250,4 +254,21 @@ p.bjqs-caption{
 
 .descripcionProducto{
 	text-align: center;
+}
+
+.dotSlide{
+	width: 50px;
+	z-index: 9999999999999;
+	position: relative;
+	top: 180px;
+}
+
+.dotNext{
+	position: relative;
+	left: 500px;
+}
+
+.dotPrev{
+	position: relative;
+	right: 10px
 }

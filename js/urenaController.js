@@ -61,12 +61,12 @@ function($scope, $filter){
     		{
     			title: 'Producto2',
     			description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea3.jpg'
+    			image: 'img/linea4.jpg'
     		},
     		{
     			title: 'Producto3',
     			description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea3.jpg'
+    			image: 'img/linea5.jpg'
     		}
     		]
     	},
@@ -78,7 +78,7 @@ function($scope, $filter){
     		{
     			title: 'Producto1',
     			description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea4.jpg'
+    			image: 'img/linea2.jpg'
     		},
     		{
     			title: 'Producto2',
@@ -88,7 +88,7 @@ function($scope, $filter){
     		{
     			title: 'Producto3',
     			description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea4.jpg'
+    			image: 'img/linea2.jpg'
     		}
     		]
     	},
@@ -115,13 +115,32 @@ function($scope, $filter){
     		]
         }
         ];
+
+        $scope.currentIndex = 0;
+
+        $scope.setCurrentSlideIndex = function (index) {
+            $scope.currentIndex = index;
+        };
+
+        $scope.isCurrentSlideIndex = function (index) {
+            return $scope.currentIndex === index;
+        };
+
+        $scope.prevSlide = function (linea) {
+            $scope.currentIndex = ($scope.currentIndex < linea.productos.length - 1) ? ++$scope.currentIndex : 0;
+            $scope.selected_product = linea.productos[$scope.currentIndex];
+        };
+
+        $scope.nextSlide = function (linea) {
+            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : linea.productos.length - 1;
+            $scope.selected_product = linea.productos[$scope.currentIndex];
+        };
+
         $scope.selected_linea_title = 'Linea3';
-        $scope.selected_linea;
+        $scope.selected_product = {title: 'Producto 1', description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.'}
         $scope.selectedProduct = 'Producto1';
 		$scope.getLinea = function(linea){
-			$filter
 			$scope.selected_linea_title = linea.titleLinea;
-			$scope.selected_linea = linea;
 			$('.productPartial').show('slow');
 			$('.home').hide('fast');
 		}
