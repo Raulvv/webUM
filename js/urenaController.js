@@ -11,88 +11,188 @@ function($scope, $filter){
     		description: 'Descripcion1',
     		image: 'img/linea3-3-g.jpg',
     		productos: [
-    		{
-    			title: 'Producto1',
-    			description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea1.jpg'
-    		},
-    		{
-    			title: 'Producto2',
-    			description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea1.jpg'
-    		},
-    		{
-    			title: 'Producto3',
-    			description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea1.jpg'
-    		}
-    		]
+            {
+                title: 'Producto1',
+                description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto2',
+                description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto3',
+                description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto4',
+                description: 'The description of the fourth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            },
+            {
+                title: 'Producto5',
+                description: 'The description of the fiveth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            },
+            {
+                title: 'Producto6',
+                description: 'The description of the sixth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto7',
+                description: 'The description of the seventh product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            },
+            {
+                title: 'Producto8',
+                description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            }
+            ]
     	},
     	{
     		titleLinea: 'Linea 2',
     		description: 'Descripcion2',
     		image: 'img/linea3-3-g.jpg',
     		productos: [
-    		{
-    			title: 'Producto1',
-    			description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea2.jpg'
-    		},
-    		{
-    			title: 'Producto2',
-    			description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea2.jpg'
-    		},
-    		{
-    			title: 'Producto3',
-    			description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea2.jpg'
-    		}
-    		]
+            {
+                title: 'Producto1',
+                description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto2',
+                description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto3',
+                description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto4',
+                description: 'The description of the fourth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto5',
+                description: 'The description of the fiveth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto6',
+                description: 'The description of the sixth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            },
+            {
+                title: 'Producto7',
+                description: 'The description of the seventh product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto8',
+                description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            }
+            ]
     	},
     	{
     		titleLinea: 'Linea3',
     		description: 'Descripcion3',
     		image: 'img/linea3-3-g.jpg',
     		productos: [
-    		{
-    			title: 'Producto1',
-    			description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea3.jpg'
-    		},
-    		{
-    			title: 'Producto2',
-    			description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea4.jpg'
-    		},
-    		{
-    			title: 'Producto3',
-    			description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea5.jpg'
-    		}
-    		]
+            {
+                title: 'Producto1',
+                description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto2',
+                description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto3',
+                description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto4',
+                description: 'The description of the fourth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto5',
+                description: 'The description of the fiveth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto6',
+                description: 'The description of the sixth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            },
+            {
+                title: 'Producto7',
+                description: 'The description of the seventh product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto8',
+                description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            }
+            ]
     	},
     	{
     		titleLinea: 'Linea4',
     		description: 'Descripcion4',
     		image: 'img/linea3-3-g.jpg',
     		productos: [
-    		{
-    			title: 'Producto1',
-    			description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea2.jpg'
-    		},
-    		{
-    			title: 'Producto2',
-    			description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea4.jpg'
-    		},
-    		{
-    			title: 'Producto3',
-    			description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea2.jpg'
-    		}
-    		]
+            {
+                title: 'Producto1',
+                description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto2',
+                description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto3',
+                description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto4',
+                description: 'The description of the fourth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto5',
+                description: 'The description of the fiveth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto6',
+                description: 'The description of the sixth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto7',
+                description: 'The description of the seventh product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            },
+            {
+                title: 'Producto8',
+                description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            }
+            ]
     	},
     	{
     		titleLinea: 'Linea5',
@@ -107,13 +207,38 @@ function($scope, $filter){
     		{
     			title: 'Producto2',
     			description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea5.jpg'
+    			image: 'img/linea2.jpg'
     		},
     		{
     			title: 'Producto3',
     			description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-    			image: 'img/linea5.jpg'
-    		}
+    			image: 'img/linea3.jpg'
+    		},
+            {
+                title: 'Producto4',
+                description: 'The description of the fourth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto5',
+                description: 'The description of the fiveth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea5.jpg'
+            },
+            {
+                title: 'Producto6',
+                description: 'The description of the sixth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea4.jpg'
+            },
+            {
+                title: 'Producto7',
+                description: 'The description of the seventh product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea3.jpg'
+            },
+            {
+                title: 'Producto8',
+                description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/linea2.jpg'
+            }
     		]
         }
         ];
