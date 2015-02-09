@@ -3,6 +3,8 @@ var app = angular.module('urenaApp', []);
 app.controller('LineaCtrl', [
 '$scope',
 function($scope, $filter){
+    $scope.check = true;
+    $scope.isActive = false;
   	$scope.lineas = [
         {
     		titleLinea: 'Linea 1',
@@ -116,6 +118,11 @@ function($scope, $filter){
         }
         ];
 
+        $scope.volverHome = function (){
+            $scope.isActive = false;
+            $scope.check = true;
+        }
+
         $scope.currentIndex = 0;
 
         $scope.setCurrentSlideIndex = function (index) {
@@ -141,7 +148,7 @@ function($scope, $filter){
         $scope.selectedProduct = 'Producto1';
 		$scope.getLinea = function(linea){
 			$scope.selected_linea_title = linea.titleLinea;
-			$('.productPartial').show('slow');
-			$('.home').hide('fast');
+            $scope.isActive = true;
+			$scope.check = false;
 		}
 }]);

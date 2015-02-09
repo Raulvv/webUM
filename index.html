@@ -26,7 +26,8 @@
         $('#banner-fade').bjqs({
           height      : 750,
           width       : 2000,
-          responsive  : true
+          responsive  : true,
+          automatic : false
         });
 
         $('.bjqs-next a').html("<img src='img/flecha_next.png'>");
@@ -40,11 +41,11 @@
 
     <header>
        <div id="logo" class="verticalAlign">
-         <img src="img/logo.png" alt="">
+         <a href="#" ng-click="volverHome()"><img src="img/logo.png" alt=""></a>
        </div>
        <div id="enlaces">
          <ul class="menu">
-           <li class="seleccion"><a href="" ng-click="getLinea({titleLinea: 'Linea 2'})">Productos</a></li>
+           <li ng-class="{menuSelect: isActive}"><a href="" ng-click="getLinea({titleLinea: 'Linea 2'})">Productos</a></li>
            <li><a href="#">Quienes Somos</a></li>
            <li><a href="#">Contacto</a></li>
            <li><a href="#">Descargas</a></li>
@@ -61,7 +62,7 @@
   
     <div id="container">
       
-      <div class="home">
+      <div class="home" ng-show="check">
         <div id="banner-fade">
           <ul class="bjqs">
             <li><img src="img/banner01.jpg" title="Texto de ejemplo para Ureña"></li>
@@ -79,7 +80,7 @@
 
       </div>
       
-      <div class="productPartial" ng-repeat="linea in lineas | filter: {titleLinea: selected_linea_title}">
+      <div class="productPartial" ng-hide="check" ng-repeat="linea in lineas | filter: {titleLinea: selected_linea_title}">
 
         <div id="banner-fade1" class="container slider">
           <img ng-repeat="producto in linea.productos" ng-hide="!isCurrentSlideIndex($index)" class="slide" ng-src="{{producto.image}}" title="{{producto.description}}">
@@ -102,16 +103,17 @@
 
           <p class="descripcionProducto">{{selected_product.description}}</p>
         </div>
-
-      </div>
-
-      <div id="catalogue">
-        <div class="lineaCatalogo" ng-repeat="linea in lineas">
-          <img ng-src="{{linea.image}}" alt="">
-          <h3 ng-click="getLinea(linea)">{{linea.titleLinea}}</h3>
-          <p>{{linea.description}}</p>
+        
+        <div id="catalogue">
+          <div class="lineaCatalogo" ng-repeat="linea in lineas">
+            <img ng-src="{{linea.image}}" alt="">
+            <h3 ng-click="getLinea(linea)">{{linea.titleLinea}}</h3>
+            <p>{{linea.description}}</p>
+          </div>
         </div>
       </div>
+
+      
 
     </div>
 
