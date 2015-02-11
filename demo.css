@@ -53,19 +53,19 @@ header{
 	display: inline-block;
 	list-style: none;
 	margin: 0;
-	margin-left: 20px;
+	margin-left: 60px;
 	height: 30px;
 	text-align: center;
 }
 
 #enlaces .menu > li{
 	padding-top: 5px;
-	width: 130px;
 }
 
 #enlaces li a{
 	color: #2B75B6;
 	font-weight: bold;
+	font-size: 18px;
 }
 
 .menuSelect{
@@ -233,6 +233,18 @@ p.bjqs-caption{
 .bjqs-prev a img{
 	width: 50px;
 	height: 50px;
+}
+
+.productGallery{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.productGallery img{
+	float: left; 
+	height: 200px; 
+	width: auto; 
 }
 
 .datosProducto{

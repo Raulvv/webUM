@@ -82,20 +82,8 @@
       
       <div class="productPartial" ng-hide="check" ng-repeat="linea in lineas | filter: {titleLinea: selected_linea_title}">
 
-        <div id="banner-fade1" class="container slider">
-          <img ng-repeat="producto in linea.productos" ng-hide="!isCurrentSlideIndex($index)" class="slide" ng-src="{{producto.image}}" title="{{producto.description}}">
-          
-          <img class="dotSlide dotPrev" src="img/flecha_prev.png" ng-click="nextSlide(linea)" alt="">
-          <img class="dotSlide dotNext" src="img/flecha_next.png" ng-click="prevSlide(linea)" alt="">
-          <nav class="nav">
-              <div class="wrapper">
-                  <ul class="dots">
-                      <li class="dot" ng-repeat="producto in linea.productos">
-                          <a href="" ng-class="{'active':isCurrentSlideIndex($index)}"
-                            ng-click="setCurrentSlideIndex($index);">{{producto.description}}</a></li>
-                  </ul>
-              </div>
-          </nav>
+        <div class="productGallery">
+          <img ng-repeat="producto in linea.productos" src="{{producto.image}}" alt="">
         </div>
 
         <div class="datosProducto">
