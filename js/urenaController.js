@@ -7,96 +7,76 @@ function($scope, $filter){
     $scope.isActive = false;
   	$scope.lineas = [
         {
-    		titleLinea: 'Linea 1',
+    		titleLinea: 'Look',
     		description: 'Descripcion1',
     		image: 'img/linea3-3-g.jpg',
     		productos: [
             {
                 title: 'Producto1',
                 description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea2.jpg'
+                image: 'img/look/look1.jpg'
             },
             {
                 title: 'Producto2',
                 description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea2.jpg'
+                image: 'img/look/look2.jpg'
             },
             {
                 title: 'Producto3',
                 description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea2.jpg'
+                image: 'img/look/look3.jpg'
             },
             {
                 title: 'Producto4',
                 description: 'The description of the fourth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea5.jpg'
+                image: 'img/look/look4.jpg'
             },
             {
                 title: 'Producto5',
                 description: 'The description of the fiveth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea5.jpg'
+                image: 'img/look/look5.jpg'
             },
             {
                 title: 'Producto6',
                 description: 'The description of the sixth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea2.jpg'
+                image: 'img/look/look6.jpg'
             },
             {
                 title: 'Producto7',
                 description: 'The description of the seventh product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea5.jpg'
+                image: 'img/look/look7.jpg'
             },
             {
                 title: 'Producto8',
                 description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea3.jpg'
+                image: 'img/look/look8.jpg'
+            },
+            {
+                title: 'Producto9',
+                description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
+                image: 'img/look/look9.jpg'
             }
             ]
     	},
     	{
-    		titleLinea: 'Linea 2',
+    		titleLinea: 'Crossystems',
     		description: 'Descripcion2',
     		image: 'img/linea3-3-g.jpg',
     		productos: [
             {
                 title: 'Producto1',
                 description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea3.jpg'
+                image: 'img/crossystem/crossystem1.jpg'
             },
             {
                 title: 'Producto2',
                 description: 'The description of the second product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea3.jpg'
+                image: 'img/crossystem/crossystem2.jpg'
             },
             {
                 title: 'Producto3',
                 description: 'The description of the third product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea3.jpg'
-            },
-            {
-                title: 'Producto4',
-                description: 'The description of the fourth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea3.jpg'
-            },
-            {
-                title: 'Producto5',
-                description: 'The description of the fiveth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea4.jpg'
-            },
-            {
-                title: 'Producto6',
-                description: 'The description of the sixth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea5.jpg'
-            },
-            {
-                title: 'Producto7',
-                description: 'The description of the seventh product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea3.jpg'
-            },
-            {
-                title: 'Producto8',
-                description: 'The description of the eighth product. It is not important to see the quality, just the maximum length we can show at the end.',
-                image: 'img/linea5.jpg'
+                image: 'img/crossystem/crossystem3.jpg'
             }
             ]
     	},
@@ -268,11 +248,12 @@ function($scope, $filter){
             $scope.selected_product = linea.productos[$scope.currentIndex];
         };
 
-        $scope.selected_linea_title = 'Linea3';
+        $scope.selected_linea_title;
         $scope.selected_product = {title: 'Producto 1', description: 'The description of the first product. It is not important to see the quality, just the maximum length we can show at the end.'}
         $scope.selectedProduct = 'Producto1';
 		$scope.getLinea = function(linea){
 			$scope.selected_linea_title = linea.titleLinea;
+            $scope.setCurrentSlideIndex(0);
             $scope.isActive = true;
 			$scope.check = false;
 		}
