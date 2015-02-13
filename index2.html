@@ -6,11 +6,11 @@
     <title>Ureña Mobiliario</title>
       
     <!-- bjqs.css contains the *essential* css needed for the slider to work -->
-    <link rel="stylesheet" href="bjqs.css">
+    <link rel="stylesheet" href="css/bjqs.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> 
-    <link rel="stylesheet" href="demo.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo2.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- load jQuery and the plugin -->
     <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
@@ -19,7 +19,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
     <script src="js/bjqs-1.3.min.js"></script>
     <script src="js/urenaController.js"></script>
-    <script src="js/funciones.js"></script>
     <script class="secret-source">
       jQuery(document).ready(function($) {
 
@@ -45,7 +44,7 @@
        </div>
        <div id="enlaces">
          <ul class="menu">
-           <li ng-class="{menuSelect: isActive}"><a href="" ng-click="getLinea({titleLinea: 'Linea 2'})">Productos</a></li>
+           <li ng-class="{menuSelect: isActive}"><a href="producto.html">Productos</a></li>
            <li><a href="#">Quienes Somos</a></li>
            <li><a href="#">Contacto</a></li>
            <li><a href="#">Descargas</a></li>
@@ -79,28 +78,6 @@
         </div>
 
       </div>
-      
-      <div class="productPartial" ng-hide="check" ng-repeat="linea in lineas | filter: {titleLinea: selected_linea_title}">
-
-        <div class="productGallery">
-          <img ng-repeat="producto in linea.productos" src="{{producto.image}}" alt="">
-        </div>
-
-        <div class="datosProducto">
-          <h2 class="tituloProducto">{{selected_product.title}}</h2>
-
-          <p class="descripcionProducto">{{selected_product.description}}</p>
-        </div>
-        
-        <div id="catalogue">
-          <div class="lineaCatalogo" ng-repeat="linea in lineas">
-            <img ng-src="{{linea.image}}" alt="">
-            <h3 ng-click="getLinea(linea)">{{linea.titleLinea}}</h3>
-            <p>{{linea.description}}</p>
-          </div>
-        </div>
-      </div>
-
       
 
     </div>

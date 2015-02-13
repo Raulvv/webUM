@@ -151,7 +151,7 @@ pre + h2{
 
 .scrollCatalogo{
 	width: 400px;
-	margin: 20px auto;
+	margin: 0 auto;
 }
 
 .scrollCatalogo hr{
@@ -169,15 +169,17 @@ pre + h2{
 }
 
 #catalogue{
-	width: 80%;
+	width: 50%;
 	height: auto;
-	margin: 0 auto;
+	margin: 25% auto;
+	margin-bottom: 0;
 }
 
 .lineaCatalogo{
 	width: 17%;
 	height: 300px;
 	margin: 1%;
+	margin-left: 12%;
 	display: inline-block;
 	text-align: center;
 }

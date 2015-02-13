@@ -1,16 +1,16 @@
 <!doctype html>
-<html>
+<html ng-app="urenaApp">
   <head>
     <meta charset="utf-8">
   
     <title>Ureña Mobiliario</title>
       
     <!-- bjqs.css contains the *essential* css needed for the slider to work -->
-    <link rel="stylesheet" href="bjqs.css">
+    <link rel="stylesheet" href="css/bjqs.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> 
-    <link rel="stylesheet" href="demo.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo2.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- load jQuery and the plugin -->
     <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
@@ -19,32 +19,17 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
     <script src="js/bjqs-1.3.min.js"></script>
     <script src="js/urenaController.js"></script>
-    <script src="js/funciones.js"></script>
-    <script class="secret-source">
-      jQuery(document).ready(function($) {
-
-        $('#banner-fade').bjqs({
-          height      : 750,
-          width       : 2000,
-          responsive  : true
-        });
-
-        $('.bjqs-next a').html("<img src='img/flecha_next.png'>");
-        $('.bjqs-prev a').html("<img src='img/flecha_prev.png'>");
-
-      });
-    </script>
   </head>
   
   <body ng-controller="LineaCtrl">
 
     <header>
        <div id="logo" class="verticalAlign">
-         <img src="img/logo.png" alt="">
+         <a href="index2.html"><img src="img/logo.png" alt=""></a>
        </div>
        <div id="enlaces">
          <ul class="menu">
-           <li class="seleccion"><a href="producto.html">Productos</a></li>
+           <li class="menuSelect"><a href="producto.html">Productos</a></li>
            <li><a href="#">Quienes Somos</a></li>
            <li><a href="#">Contacto</a></li>
            <li><a href="#">Descargas</a></li>
@@ -61,17 +46,37 @@
   
     <div id="container">
 
-      <div id="banner-fade1">
-        <ul class="bjqs">
-          <li><img src="img/banner01.jpg" title="Texto de ejemplo para Ureña"></li>
-          <li><img src="img/banner02.jpg" title="Texto de ejemplo para Ureña"></li>
-          <li><img src="img/banner03.jpg" title="Texto de ejemplo para Ureña"></li>
-        </ul>
+      <div class="productPartial" ng-hide="check">
+
+        <div id="banner-fade1" class="container slider" ng-repeat="linea in lineas | filter: {titleLinea: selected_linea_title}">
+          <img ng-repeat="producto in linea.productos" ng-hide="!isCurrentSlideIndex($index)" class="slide" ng-src="{{producto.image}}" title="{{producto.description}}">
+          
+          <img class="dotSlide dotPrev" src="img/flecha_prev.png" ng-click="nextSlide(linea)" alt="">
+          <img class="dotSlide dotNext" src="img/flecha_next.png" ng-click="prevSlide(linea)" alt="">
+          <nav class="nav">
+              <div class="wrapper">
+                  <ul class="dots">
+                      <li class="dot" ng-repeat="producto in selected_linea">
+                          <a href="" ng-class="{'active':isCurrentSlideIndex($index)}"
+                            ng-click="setCurrentSlideIndex($index);">{{producto.description}}</a></li>
+                  </ul>
+              </div>
+          </nav>
+        </div>
+
+        <div class="datosProducto">
+          <h2 class="tituloProducto">{{selected_product.title}}</h2>
+
+          <p class="descripcionProducto">{{selected_product.description}}</p>
+        </div>
       </div>
 
-      <h2 class="tituloProducto">Titulo del Producto</h2>
-
-      <p class="descripcionProducto">Descripcion larga del producto. Aqui se puede meter tanto como quieras, siempre que su longitud no haga que la pagina sea tan larga que haga scroll.</p>
+      <div id="catalogue" ng-show="isShow" ng-class="animation">
+        <div class="lineaCatalogo repeat-animation" ng-repeat="linea in lineas">
+          <h3 ng-click="getLinea(linea)">{{linea.titleLinea}}</h3>
+          <p>{{linea.description}}</p>
+        </div>
+      </div>
 
     </div>
 
